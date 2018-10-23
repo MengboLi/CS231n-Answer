@@ -154,7 +154,7 @@ model.cuda()
 # model = torch.nn.DataParallel(model, device_ids=range(torch.cuda.device_count()))
 # cudnn.benchmark = True
 # optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9, nesterov=True,weight_decay=5e-4)
+optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9, nesterov=True)
 # You should get at least 70% accuracy
 Device_Choose('GPU')
 t1 = time()
